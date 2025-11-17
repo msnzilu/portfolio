@@ -56,7 +56,7 @@ export default function Contact() {
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or
+          I’m always open to discussing new projects, creative ideas, or
           opportunities to be part of your visions.
         </p>
       </div>

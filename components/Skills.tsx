@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Database, Brain, Globe } from "lucide-react";
+import { Code, Database, Brain, Globe, LucideIcon } from "lucide-react";
 
 interface Skill {
   name: string;
@@ -9,7 +9,7 @@ interface Skill {
 
 interface SkillCategory {
   title: string;
-  icon: any;
+  icon: LucideIcon;
   skills: Skill[];
   color: string;
 }

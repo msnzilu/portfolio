@@ -25,7 +25,7 @@ export default function About() {
           {/* Left: Bio Text */}
           <div className="space-y-5 text-slate-300">
             <p className="text-base sm:text-lg leading-relaxed">
-              I'm a Full-Stack Developer and AI Engineer with a passion for
+              I’m a Full-Stack Developer and AI Engineer with a passion for
               creating innovative solutions at the intersection of web
               development and artificial intelligence. With expertise in both
               frontend and backend technologies, I specialize in building
@@ -38,11 +38,11 @@ export default function About() {
               experiences that are both intuitive and powerful.
             </p>
             <p className="text-base sm:text-lg leading-relaxed">
-              When I'm not coding, I'm exploring the latest developments in AI,
+              When I’m not coding, I’m exploring the latest developments in AI,
               contributing to open-source projects, or sharing knowledge with
-              the developer community. I'm always eager to take on new
+              the developer community. I’m always eager to take on new
               challenges and collaborate on projects that push the boundaries of
-              what's possible.
+              what’s possible.
             </p>
           </div>
 
