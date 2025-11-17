@@ -13,26 +13,29 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Software Development Intern",
-    company: "Fintech & Innovations Ltd",
-    location: "Nairobi, Kenya",
-    period: "June 2024 - Dec 2024",
+    title: "Junior Full-Stack Developer Intern",
+    company: "FinTech & Innovations Ltd",
+    location: "Remote (Nairobi, Kenya)",
+    period: "June 2024 – December 2024",
     description: [
-      "Assisted in building responsive web applications using React and Node.js",
-      "Participated in agile development process and daily stand-ups",
-      "Fixed bugs and implemented new features based on user feedback",
-      "Wrote unit tests achieving 85% code coverage",
+      "Collaborated with a 5-person remote team to build and ship backend APIs for a mobile payment tracking application using Java/Spring Boot and Python/Django",
+      "Developed secure, thread-safe RESTful APIs for payment processing endpoints handling high-concurrency transactions in a FinTech environment",
+      "Optimized PostgreSQL queries and debugged React frontend integration issues, reducing page load times by 20%",
+      "Implemented user authentication, data endpoints, and participated in daily Agile stand-ups + bi-weekly code reviews on GitHub",
+      "Wrote clean, tested code following senior feedback; adopted best practices with pytest and modular design",
+      "Containerized development environments using Docker and assisted in QA handover with cross-browser testing",
     ],
     technologies: [
-      "React",
       "Java",
       "Spring Boot",
       "Python",
       "Django",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "Jest",
+      "Django REST Framework",
+      "NextJS",
+      "PostgreSQL",
+      "Docker",
+      "Git & GitHub",
+      "pytest",
     ],
   },
 ];
@@ -94,23 +97,34 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  {/* Description */}
-                  <ul
-                    className={`space-y-2 mb-4 ${
-                      index % 2 === 0 ? "md:text-right" : ""
-                    }`}
-                  >
-                    {exp.description.map((item, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className="text-slate-300 text-sm flex items-start gap-2"
+                  {/* Final version – colored bullets + tight + justified + centered feel */}
+                  <div className="space-y-3 mb-6">
+                    {exp.description.map((item, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-4 
+                 hover:bg-slate-800/30 rounded-lg 
+                 transition-all duration-200"
                       >
-                        <span className="text-cyan-400 mt-1">▸</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                        {/* Colored bullet – centered vertically, not left-stuck */}
+                        <div
+                          className="w-2 h-2 rounded-full bg-cyan-500 
+                      flex-shrink-0 
+                      group-hover:scale-150 group-hover:bg-cyan-400 
+                      transition-transform duration-200"
+                        />
 
+                        <p
+                          className="flex-1 text-slate-300 
+                    leading-snug text-sm 
+                    text-justify hyphens-auto 
+                    pr-2"
+                        >
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                   {/* Technologies */}
                   <div
                     className={`flex flex-wrap gap-2 ${
