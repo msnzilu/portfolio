@@ -52,15 +52,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll to section
-  const scrollToSection = (href) => {
+  const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const offsetTop = element.offsetTop - 80;
+      const offsetTop =
+        element.getBoundingClientRect().top + window.scrollY - 80;
+
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
       });
+
       setIsMobileMenuOpen(false);
     }
   };
