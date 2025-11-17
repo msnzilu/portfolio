@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Database, Cloud, Brain, Layers, Globe } from "lucide-react";
+import { Code, Database, Brain, Globe } from "lucide-react";
 
 interface Skill {
   name: string;
