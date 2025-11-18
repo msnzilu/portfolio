@@ -46,9 +46,9 @@ export default function Hero() {
 
         {/* Description */}
         <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10 animate-fade-in-up delay-300">
-          Building intelligent solutions at the intersection of Software
-          Engineering & AI. Specialized in creating scalable applications with
-          cutting-edge AI integration.
+          Crafting innovative web applications and intelligent systems that
+          solve real-world problems. Focused on building scalable solutions with
+          modern technologies and machine learning capabilities.
         </p>
 
         {/* CTA Buttons */}
