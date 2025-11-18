@@ -18,12 +18,12 @@ const experiences: Experience[] = [
     location: "Remote (Nairobi, Kenya)",
     period: "June 2024 – December 2024",
     description: [
-      "Collaborated with a 5-person remote team to build and ship backend APIs for a mobile payment tracking application using Java/Spring Boot and Python/Django",
-      "Developed secure, thread-safe RESTful APIs for payment processing endpoints handling high-concurrency transactions in a FinTech environment",
-      "Optimized PostgreSQL queries and debugged React frontend integration issues, reducing page load times by 20%",
-      "Implemented user authentication, data endpoints, and participated in daily Agile stand-ups + bi-weekly code reviews on GitHub",
-      "Wrote clean, tested code following senior feedback; adopted best practices with pytest and modular design",
-      "Containerized development environments using Docker and assisted in QA handover with cross-browser testing",
+      "Built backend APIs with Java/Spring Boot and Python/Django in 5-person remote team",
+      "Developed secure RESTful APIs for high-concurrency payment processing",
+      "Optimized PostgreSQL queries, reduced load times 20%",
+      "Implemented authentication and data endpoints",
+      "Wrote tested code with pytest following best practices",
+      "Containerized environments with Docker, supported QA testing",
     ],
     technologies: [
       "Java",
