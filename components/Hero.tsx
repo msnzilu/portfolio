@@ -41,7 +41,7 @@ export default function Hero() {
 
         {/* Title */}
         <p className="text-xl sm:text-2xl lg:text-3xl text-slate-300 mb-6 animate-fade-in-up delay-200">
-          Software Engineer | Machine Learning
+          Software Engineer
         </p>
 
         {/* Description */}
