@@ -25,11 +25,11 @@ export default function About() {
           {/* Left: Bio Text */}
           <div className="space-y-5 text-slate-300">
             <p className="text-base sm:text-lg leading-relaxed">
-              I&apos;m a Full-Stack Developer and AI Engineer with a passion for
-              creating innovative solutions at the intersection of web
-              development and artificial intelligence. With expertise in both
-              frontend and backend technologies, I specialize in building
-              scalable applications that leverage the power of AI.
+              I&apos;m a Software Engineer with a passion for creating
+              innovative solutions that blend web technologies with machine
+              learning capabilities. With expertise in both frontend and backend
+              development, I build scalable applications that solve real-world
+              problems through intelligent automation.
             </p>
             <p className="text-base sm:text-lg leading-relaxed">
               My journey took an unconventional path - I began my career in
@@ -37,15 +37,16 @@ export default function About() {
               This unique background gives me a problem-solving perspective that
               combines crisis response thinking with technical innovation.
               I&apos;ve since worked on diverse projects ranging from FinTech
-              platforms to multi-agent AI systems, always focused on writing
-              clean, maintainable code and creating intuitive user experiences.
+              platforms to intelligent multi-agent systems, always focused on
+              writing clean, maintainable code and creating intuitive user
+              experiences.
             </p>
             <p className="text-base sm:text-lg leading-relaxed">
-              When I&apos;m not coding, I&apos;m exploring the latest
-              developments in AI, contributing to open-source projects, or
-              sharing knowledge with the developer community. I&apos;m always
-              eager to take on new challenges and collaborate on projects that
-              push the boundaries of what&apos;s possible.
+              When I&apos;m not coding, I&apos;m exploring emerging
+              technologies, contributing to open-source projects, or sharing
+              knowledge with the developer community. I&apos;m always eager to
+              take on new challenges and collaborate on projects that push the
+              boundaries of what&apos;s possible.
             </p>
           </div>
 
