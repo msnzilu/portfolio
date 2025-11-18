@@ -70,7 +70,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? "bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-800"
           : "bg-transparent"
       }`}
@@ -126,7 +126,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-800">
+          <div className="md:hidden py-4 border-t border-slate-800 bg-slate-900/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <a
