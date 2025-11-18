@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -45,6 +46,46 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null
+  );
+
+  // ADD THIS FUNCTION HERE
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const formData = new FormData(e.target as HTMLFormElement);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="space-y-12">
       {/* Section Header */}
@@ -56,7 +97,7 @@ export default function Contact() {
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto">
-          I’m always open to discussing new projects, creative ideas, or
+          I&apos;m always open to discussing new projects, creative ideas, or
           opportunities to be part of your visions.
         </p>
       </div>
@@ -115,7 +156,8 @@ export default function Contact() {
 
         {/* Contact Form */}
         <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-          <form className="space-y-6">
+          {/* ADD onSubmit HERE */}
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="name"
@@ -127,6 +169,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
+                required
                 className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
                 placeholder="Your name"
               />
@@ -143,6 +186,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                required
                 className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
                 placeholder="your.email@example.com"
               />
@@ -159,6 +203,7 @@ export default function Contact() {
                 type="text"
                 id="subject"
                 name="subject"
+                required
                 className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
                 placeholder="What's this about?"
               />
@@ -175,16 +220,30 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={5}
+                required
                 className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors resize-none"
                 placeholder="Your message..."
               ></textarea>
             </div>
 
+            {/* Status Messages */}
+            {submitStatus === "success" && (
+              <p className="text-green-400 text-sm">
+                Message sent successfully!
+              </p>
+            )}
+            {submitStatus === "error" && (
+              <p className="text-red-400 text-sm">
+                Failed to send message. Please try again.
+              </p>
+            )}
+
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+              disabled={isSubmitting}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

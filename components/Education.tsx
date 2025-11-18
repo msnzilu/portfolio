@@ -26,6 +26,15 @@ const education: Education[] = [
     description:
       "Graduated with Second Class Honors. Specialized in Artificial Intelligence and Software Engineering. Final year project on AI-powered recommendation systems.",
   },
+  {
+    degree:
+      "Bachelor of Science in Disaster Management and International Diplomacy",
+    institution: "Masinde Muliro University of Science and Technology",
+    location: "Nairobi, Kenya",
+    period: "2012 - 2016",
+    description:
+      "Graduated with Second Class Honors. Specialized in Disaster and Risk Management.",
+  },
 ];
 
 const certifications: Certification[] = [
