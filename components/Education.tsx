@@ -46,17 +46,17 @@ const certifications: Certification[] = [
   {
     name: "ETL and Data Pipelines with Shell, Airflow and Kafka",
     issuer: "IBM",
-    date: "2024",
+    date: "Dec 2024",
   },
   {
     name: "Getting Started with Data Warehousing and BI Analytics",
     issuer: "IBM",
-    date: "2024",
+    date: "Sept 2024",
   },
   {
     name: "Hands-on Introduction to Linux Commands and Shell Scripting",
     issuer: "IBM",
-    date: "2024",
+    date: "April 2024",
   },
   {
     name: "Data Science Professional Certificate",
