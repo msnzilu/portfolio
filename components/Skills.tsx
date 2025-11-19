@@ -16,29 +16,21 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend Development",
-    icon: Globe,
+    title: "Full Stack Development",
+    icon: Code,
     color: "from-blue-500 to-cyan-500",
     skills: [
       { name: "React / Next.js", level: 88 },
       { name: "TypeScript", level: 82 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "HTMX + Alpine.js", level: 85 },
-    ],
-  },
-  {
-    title: "Backend Development",
-    icon: Code,
-    color: "from-green-500 to-emerald-500",
-    skills: [
       { name: "Python / Django", level: 90 },
       { name: "Java / Spring Boot", level: 78 },
       { name: "FastAPI", level: 85 },
+      { name: "Tailwind CSS", level: 90 },
       { name: "RESTful APIs", level: 88 },
     ],
   },
   {
-    title: "AI & LLM Engineering",
+    title: "AI & Machine Learning",
     icon: Brain,
     color: "from-purple-500 to-pink-500",
     skills: [
@@ -46,6 +38,8 @@ const skillCategories: SkillCategory[] = [
       { name: "OpenAI / Claude APIs", level: 90 },
       { name: "Vector DBs (pgvector)", level: 82 },
       { name: "Prompt Engineering", level: 85 },
+      { name: "TensorFlow / PyTorch", level: 75 },
+      { name: "Scikit-learn", level: 80 },
     ],
   },
   {
