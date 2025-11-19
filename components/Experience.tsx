@@ -160,12 +160,12 @@ export default function Experience() {
                   </div>
 
                   {/* Final version – colored bullets + tight + justified + centered feel */}
-                  <div className="space-y-1 mb-3">
+                  <div className="space-y-1 mb-1">
                     {exp.description.map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-3 
-        hover:bg-slate-800/30 rounded-lg p-2 -ml-2
+                        className="flex items-start gap-1 
+        hover:bg-slate-800/30 rounded-lg p-1 md:p-2 ml-1
         transition-all duration-200 group"
                       >
                         {/* Chevron Arrow Bullet */}
@@ -188,8 +188,8 @@ export default function Experience() {
 
                         <p
                           className="flex-1 text-slate-300 
-          leading-relaxed text-sm sm:text-base
-          text-justify hyphens-auto"
+          leading-relaxed text-sm sm:text-xs
+          text-justify hyphens-auto mb-1"
                           style={{ textAlignLast: "right" }}
                         >
                           {item}
