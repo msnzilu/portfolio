@@ -13,6 +13,67 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    title: "AI Engineer & Full-Stack Developer",
+    company: "Agents47 - AI Agent Platform (Personal Project)",
+    location: "Remote",
+    period: "January 2024 – Present",
+    description: [
+      "Built AI Agent Platform for creating customizable intelligent agents across 6 business use cases",
+      "Developed full-stack application with Django, PostgreSQL with pgvector, and Django Channels for real-time chat",
+      "Implemented LangChain agents with OpenAI GPT-4 and Anthropic Claude integration",
+      "Built RAG system with semantic search, document embeddings, and vector storage",
+      "Created REST API, webhook system with Celery, and embeddable chat widget",
+      "Achieved 85%+ test coverage with comprehensive unit, integration, and E2E testing",
+    ],
+    technologies: [
+      "Python",
+      "Django",
+      "LangChain",
+      "OpenAI GPT-4",
+      "Anthropic Claude",
+      "PostgreSQL",
+      "pgvector",
+      "Django Channels",
+      "WebSockets",
+      "Redis",
+      "Celery",
+      "Django REST Framework",
+      "Docker",
+      "HTMX",
+      "Tailwind CSS",
+      "Git & GitHub",
+    ],
+  },
+  {
+    title: "AI/ML Engineer & Full-Stack Developer",
+    company: "VisionAI (Personal Project)",
+    location: "Remote",
+    period: "March 2024 – November 2024",
+    description: [
+      "Built AI-powered job application automation platform processing 100+ applications per user",
+      "Engineered ML-based browser automation using Puppeteer for intelligent form filling",
+      "Developed OpenAI GPT integration generating custom CVs and cover letters with 95% relevance score",
+      "Implemented intelligent job matching algorithm analyzing user profiles against job requirements",
+      "Built FastAPI backend and responsive frontend with Tailwind CSS for seamless user experience",
+      "Integrated Stripe payment processing for freemium subscription model and MongoDB for scalable data storage",
+      "Deployed comprehensive application tracking system with analytics dashboard",
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "OpenAI GPT",
+      "Machine Learning",
+      "Puppeteer",
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "Stripe",
+      "Tailwind CSS",
+      "Git & GitHub",
+      "nginx",
+    ],
+  },
+  {
     title: "Junior Full-Stack Developer Intern",
     company: "FinTech & Innovations Ltd",
     location: "Remote (Nairobi, Kenya)",
@@ -34,6 +95,7 @@ const experiences: Experience[] = [
       "NextJS",
       "PostgreSQL",
       "Docker",
+      "nginx",
       "Git & GitHub",
       "pytest",
     ],
@@ -98,27 +160,37 @@ export default function Experience() {
                   </div>
 
                   {/* Final version – colored bullets + tight + justified + centered feel */}
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-1 mb-3">
                     {exp.description.map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-4 
-                 hover:bg-slate-800/30 rounded-lg 
-                 transition-all duration-200"
+                        className="flex items-start gap-3 
+        hover:bg-slate-800/30 rounded-lg p-2 -ml-2
+        transition-all duration-200 group"
                       >
-                        {/* Colored bullet – centered vertically, not left-stuck */}
+                        {/* Chevron Arrow Bullet */}
                         <div
-                          className="w-2 h-2 rounded-full bg-cyan-500 
-                      flex-shrink-0 
-                      group-hover:scale-150 group-hover:bg-cyan-400 
-                      transition-transform duration-200"
-                        />
+                          className="flex-shrink-0 mt-1 text-cyan-500 group-hover:text-cyan-400 
+        transition-all duration-300 group-hover:translate-x-1"
+                        >
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
 
                         <p
                           className="flex-1 text-slate-300 
-                    leading-snug text-sm 
-                    text-justify hyphens-auto 
-                    pr-2"
+          leading-relaxed text-sm sm:text-base
+          text-justify hyphens-auto"
+                          style={{ textAlignLast: "right" }}
                         >
                           {item}
                         </p>
