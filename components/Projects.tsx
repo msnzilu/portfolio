@@ -13,6 +13,25 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Prepzi - AI-Powered Meal Planning App",
+    description:
+      "A smart meal planning app that generates personalized weekly and monthly plans based on your inventory and dietary preferences. Features waste-reducing inventory-first planning, international cuisine support, nutrition tracking, and meal timers with offline-first architecture.",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Firebase Firestore",
+      "Firebase Auth",
+      "Redux Toolkit",
+      "TanStack Query",
+      "Spoonacular API",
+      "NativeWind",
+    ],
+    github: "https://github.com/msnzilu/global-eats",
+    // demo: "https://www.prepzi.app/",
+    featured: true,
+  },
+  {
     title: "Agents47 - Multi-Agent AI Platform",
     description:
       "A sophisticated multi-agent AI system built with LangChain and LangGraph. Features autonomous agents for research, content creation, and data analysis with real-time collaboration capabilities.",
@@ -25,7 +44,7 @@ const projects: Project[] = [
       "NextJS",
     ],
     github: "https://github.com/msnzilu/agents47",
-    demo: "https://agents47.online",
+    // demo: "https://agents47.online",
     featured: true,
   },
   {
@@ -48,7 +67,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    title: "VisionAI - AI-Powered Job Application Platform",
+    title: "Synovae - AI-Powered Job Application Platform",
     description:
       "An AI-powered platform that automates job applications. Features intelligent job matching, AI-generated custom CVs and cover letters, ML-powered browser autofill, and comprehensive application tracking with a freemium subscription model.",
     technologies: [
@@ -65,26 +84,7 @@ const projects: Project[] = [
       "Stripe",
     ],
     github: "https://github.com/msnzilu/vision.ai",
-    // demo: "https://visionsai.store/",
-    featured: true,
-  },
-  {
-    title: "Global Eats - AI-Powered Meal Planning App",
-    description:
-      "A smart meal planning app that generates personalized weekly and monthly plans based on your inventory and dietary preferences. Features waste-reducing inventory-first planning, international cuisine support, nutrition tracking, and meal timers with offline-first architecture.",
-    technologies: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "Firebase Firestore",
-      "Firebase Auth",
-      "Redux Toolkit",
-      "TanStack Query",
-      "Spoonacular API",
-      "NativeWind",
-    ],
-    github: "https://github.com/msnzilu/global-eats",
-    // demo: "https://expo.dev/@yourusername/global-eats",
+    demo: "https://synovae.io/",
     featured: true,
   },
 ];
