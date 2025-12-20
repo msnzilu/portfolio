@@ -8,9 +8,6 @@ export const metadata: Metadata = {
   title: "Julius Matheka Charles | Software Engineer",
   description:
     "Software Engineer specializing in building scalable web applications with machine learning capabilities. Expert in Python, Java, React, and modern web technologies.",
-  icons: {
-    icon: "/logo/logo.png",
-  },
   keywords: [
     "Software Engineer",
     "Machine Learning",
