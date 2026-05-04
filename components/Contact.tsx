@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "talktome@juliusmatheka.space",
-    href: "mailto:talktome@juliusmatheka.space",
+    value: "cjmatheka@gmail.com",
+    href: "mailto:cjmatheka@gmail.com",
   },
 ];
 
